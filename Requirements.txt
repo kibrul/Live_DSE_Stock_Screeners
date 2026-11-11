@@ -1,8 +1,0 @@
-streamlit
-bdshare
-pandas
-pytz
-requests
-lxml
-beautifulsoup4
-python-dateutil
