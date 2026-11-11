@@ -3,7 +3,6 @@ import streamlit as st
 import pandas as pd
 import time
 from datetime import datetime, timedelta
-import pytz
 
 try:
     from bdshare import get_current_trade_data, get_basic_historical_data, get_market_status, BDShareError
@@ -12,7 +11,8 @@ except ImportError:
     BDSHARE_AVAILABLE = False
 
 st.set_page_config(page_title="DSE Live Open Scanner - Real bdshare", layout="wide", page_icon="📈")
-DHAKA_TZ = pytz.timezone('Asia/Dhaka')
+from zoneinfo import ZoneInfo
+DHAKA_TZ = ZoneInfo('Asia/Dhaka')
 
 st.title("📈 DSE Live Open Scanner v2 - REAL bdshare")
 st.caption("Ordinary Common ONLY | Price 3-900 | Gainer >=3% | Live when market open + 15-min VWAP Reclaim")
