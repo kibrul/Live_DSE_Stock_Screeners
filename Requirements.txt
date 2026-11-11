@@ -1,0 +1,7 @@
+streamlit>=1.30.0
+bdshare>=0.1.9
+pandas>=1.5.0
+pytz
+requests
+lxml
+beautifulsoup4
